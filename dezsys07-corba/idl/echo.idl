@@ -1,0 +1,13 @@
+#ifndef __ECHO_IDL__
+#define __ECHO_IDL__
+module gschiegl {
+	interface Calculator {
+		exception DivisionByZeroException {
+			string cause;	
+		};
+	
+		long add(in long num1, in long num2);
+		double divide(in long num1, in long num2) raises(DivisionByZeroException);
+	};	
+};
+#endif  // __ECHO_IDL__
